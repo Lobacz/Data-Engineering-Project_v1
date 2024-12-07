@@ -38,6 +38,7 @@ The dataset comprises ten CSV files, each containing valuable data related to va
 1. **Data Ingestion**  
 - Raw data was copied from a GitHub repository using ADF pipelines.  
 - Data was stored in the `bronze` folder in ADLS Gen2.
+  
 ![ADF](ScreenShots/adf.png)
 
 2. **Data Transformation**  
@@ -45,11 +46,18 @@ The dataset comprises ten CSV files, each containing valuable data related to va
 - Loaded CSV files into DataFrames.  
 - Performed schema validation and cleaned missing values.  
 - Transformed data was written to the `silver` folder in ADLS Gen2.
+  
+![databricks](ScreenShots/databricks.png)
+![storage](ScreenShots/storage.png)
+
 
 3. **Data Warehousing**  
 - Transformed data was linked to Azure Synapse Analytics.  
 - Views were created in a SQL pool for querying and analysis.
 - Business-level aggregate data was written to the `gold` folder in ADLS Gen2.
+
+![Synapse](ScreenShots/Synapse.png)
+
 ---
 
 ## ✨ Key Features  
