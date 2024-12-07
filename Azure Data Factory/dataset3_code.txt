@@ -1,0 +1,39 @@
+{
+    "name": "Sink_dynamic",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureDataLakeStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "parameters": {
+            "parameter_folder_sink": {
+                "type": "String"
+            },
+            "parameter_file_sink": {
+                "type": "String"
+            }
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": {
+                    "value": "@dataset().parameter_file_sink",
+                    "type": "Expression"
+                },
+                "folderPath": {
+                    "value": "@dataset().parameter_folder_sink",
+                    "type": "Expression"
+                },
+                "fileSystem": "bronze"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
