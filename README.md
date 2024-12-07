@@ -67,6 +67,7 @@ The dataset comprises ten CSV files, each containing valuable data related to va
 - **Analytics-Ready Data**: Structured data ready for immediate querying and visualization.
 
 ---
+
  ## 📌 Conclusion 
  
 This project demonstrates the power of Azure services in building efficient and scalable ETL pipelines. It highlights how Azure Data Factory, ADLS Gen2, Databricks, Synapse Analytics, and Power BI can be seamlessly integrated to process and analyze real-world datasets. The solution provides a solid foundation for production-grade implementations.---
