@@ -38,6 +38,7 @@ The dataset comprises ten CSV files, each containing valuable data related to va
 1. **Data Ingestion**  
 - Raw data was copied from a GitHub repository using ADF pipelines.  
 - Data was stored in the `bronze` folder in ADLS Gen2.
+![ADF](ScreenShots/adf.png)
 
 2. **Data Transformation**  
 - Data was processed in Azure Databricks using PySpark:  
