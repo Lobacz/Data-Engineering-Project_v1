@@ -1,0 +1,119 @@
+-----------------------
+-- CREATE VIEW CALENDAR
+-----------------------
+CREATE VIEW gold.calendar
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Calendar/',
+        FORMAT = 'PARQUET'
+    ) AS CalendarQuery
+
+-----------------------
+-- CREATE VIEW CUSTOMER
+-----------------------
+CREATE VIEW gold.customer
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Customer/',
+        FORMAT = 'PARQUET'
+    ) AS CustomerQuery
+
+-----------------------
+-- CREATE VIEW PRODUCTCATEGORIES
+-----------------------
+CREATE VIEW gold.productcategories
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/ProductCategories/',
+        FORMAT = 'PARQUET'
+    ) AS ProductCategoriesQuery
+
+-----------------------
+-- CREATE VIEW PRODUCTS
+-----------------------
+CREATE VIEW gold.products
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Products/',
+        FORMAT = 'PARQUET'
+    ) AS ProductsQuery
+    
+-----------------------
+-- CREATE VIEW PRODUCTSUBCATEGORIES
+-----------------------
+CREATE VIEW gold.productsubcategories
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/ProductSubcategories/',
+        FORMAT = 'PARQUET'
+    ) AS ProductSubcategoriesQuery
+
+-----------------------
+-- CREATE VIEW RETURNS
+-----------------------
+CREATE VIEW gold.returns
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Returns/',
+        FORMAT = 'PARQUET'
+    ) AS ReturnsQuery
+
+-----------------------
+-- CREATE VIEW SALES
+-----------------------
+CREATE VIEW gold.sales
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Sales/',
+        FORMAT = 'PARQUET'
+    ) AS SalesQuery
+
+-----------------------
+-- CREATE VIEW TERRITORIES
+-----------------------
+CREATE VIEW gold.territories
+
+AS
+
+SELECT 
+    *
+FROM
+    OPENROWSET(
+        BULK 'https://project1storagedatalake.blob.core.windows.net/silver/Territories/',
+        FORMAT = 'PARQUET'
+    ) AS TerritoriesQuery
